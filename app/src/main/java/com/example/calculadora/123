@@ -1,0 +1,45 @@
+    public String getFirstString(){
+        double result;
+        char getSymbol=' ';
+        int pos=0;
+        String aux = "",aux2="", eltexto = textView.toString(),salida="";
+        for (int i = 0; i < eltexto.length(); i++) {
+            if (eltexto.charAt(i) >=42 ||eltexto.charAt(i) >=47 ){
+                pos=i;
+                getSymbol = eltexto.charAt(i);
+
+            } else if (i<pos) {
+                aux += eltexto.charAt(i);
+            }else{
+                aux2 += eltexto.charAt(i);
+
+            }
+        }
+      result= calcular(getSymbol, aux, aux2);
+      salida=Double.toString(result);
+
+
+        return salida;
+    }
+.
+
+
+
+
+    public String getFirstString() {
+        int i = 0;
+
+        boolean encontrado = false;
+        String aux = "", eltexto = textView.toString();
+        do {
+            if (eltexto.charAt(i) <= 57 || eltexto.charAt(i) >= 48) {
+                aux += eltexto.charAt(i);
+            } else {
+                encontrado = true;
+            }
+
+            i++;
+        } while (i <= eltexto.length() || !encontrado);
+
+        return aux;
+    }

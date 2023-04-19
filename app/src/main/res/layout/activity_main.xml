@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="doButtonClick5"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText,UsingOnClickInXml,DuplicateSpeakableTextCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doButtonClick5"
+        tools:context=".MainActivity"
+        tools:ignore="DuplicateSpeakableTextCheck,ExtraText,MissingConstraints,UsingOnClickInXml">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="342dp"
+            android:layout_height="323dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginEnd="104dp"
+            android:layout_marginBottom="156dp"
+            android:columnCount="4"
+            android:rowCount="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clear">
+
+
+            <Button
+                android:id="@+id/seven"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick7"
+                android:text="@string/_7"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/eight"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick8"
+                android:text="@string/_8"
+                tools:ignore="UsingOnClickInXml" />
+
+
+            <Button
+                android:id="@+id/nine"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick9"
+                android:text="@string/_9"
+                tools:ignore="UsingOnClickInXml" />
+
+
+            <Button
+                android:id="@+id/slash"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClickSlash"
+                android:text="@string/slash"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/four"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick4"
+                android:text="@string/_4"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/five"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick5"
+                android:text="@string/_5"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/six"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick6"
+                android:text="6"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/multiply"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClickMult"
+                android:text="*"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/one"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick1"
+                android:text="@string/_1"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/two"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick2"
+                android:text="@string/_2"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/three"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick3"
+                android:text="@string/_3"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClickMin"
+                android:text="@string/minus"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/doc"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClickDoc"
+                android:text="@string/doc"
+                tools:ignore="VisualLintBounds" />
+
+            <Button
+                android:id="@+id/zero"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClick0"
+                android:text="@string/zero"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/equal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClickEqual"
+                android:text="@string/equal" />
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="3"
+                android:layout_column="3"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:onClick="doButtonClickPlus"
+                android:text="@string/plus"
+                tools:ignore="UsingOnClickInXml" />
+
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="162dp"
+            android:layout_height="80dp"
+            android:onClick="doButtonClickClear"
+            android:text="@string/clear"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+            app:layout_constraintEnd_toEndOf="@+id/textoNum"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textoNum"
+            app:layout_constraintTop_toBottomOf="@+id/textoNum"
+            tools:ignore="UsingOnClickInXml" />
+
+        <TextView
+            android:id="@+id/textoNum"
+            android:layout_width="338dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="0"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toTopOf="@+id/clear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.438"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.045"
+            tools:ignore="RtlCompat" />
+
+        <TableLayout
+            android:layout_width="337dp"
+            android:layout_height="106dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.453"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+            app:layout_constraintVertical_bias="0.95">
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/showOptions"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mostrar_opciones_deshabilitar"
+                    tools:ignore="VisualLintButtonSize,VisualLintBounds" />
+            </TableRow>
+
+            <TableRow>
+
+
+                <LinearLayout
+                    android:id="@+id/lhori"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/suma" />
+
+                    <RadioButton
+                        android:id="@+id/radioRes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/resta" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/multiplicacion" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonDivision"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/division" />
+                </LinearLayout>
+
+            </TableRow>
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
