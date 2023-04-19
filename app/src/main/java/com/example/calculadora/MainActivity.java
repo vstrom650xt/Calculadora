@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -48,47 +49,76 @@ public class MainActivity extends AppCompatActivity {
                     layoutHorizontal.setVisibility(View.VISIBLE);
                 else{
                     layoutHorizontal.setVisibility(View.INVISIBLE);
-                    plus.setEnabled(true);
-                    minus.setEnabled(true);
-                    div.setEnabled(true);
-                    mult.setEnabled(true);
+
+                    //ESTO LO PUEDO QUITAR POR USSAR onCheckedChanged , si usase OnClick tendria que descomentarlo por q no volveria a ponerse a true
+//                    plus.setEnabled(true);
+//                    minus.setEnabled(true);
+//                    div.setEnabled(true);
+//                    mult.setEnabled(true);
+
+                    rbsuma.setChecked(false);
+                    rbresta.setChecked(false);
+                    rbmulti.setChecked(false);
+                    rbdivi.setChecked(false);
+
                 }
 
             }
         });
 
-        rbsuma.setOnClickListener(new View.OnClickListener() {
+        rbsuma.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (rbsuma.isChecked())
                     plus.setEnabled(false);
-
+                else
+                    plus.setEnabled(true);
 
             }
         });
+//        rbsuma.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (rbsuma.isChecked())
+//                    plus.setEnabled(false);
+//                //setoncheckedchange
+//
+//
+//
+//            }
+//        });
 
-        rbresta.setOnClickListener(new View.OnClickListener() {
+        rbresta.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (rbresta.isChecked())
                     minus.setEnabled(false);
+                else
+                    minus.setEnabled(true);
+
 
             }
         });
 
-        rbmulti.setOnClickListener(new View.OnClickListener() {
+        rbmulti.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (rbmulti.isChecked())
                     mult.setEnabled(false);
+                else
+                    mult.setEnabled(true);
+
             }
         });
 
-        rbdivi.setOnClickListener(new View.OnClickListener() {
+        rbdivi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (rbdivi.isChecked())
                     div.setEnabled(false);
+                else
+                    div.setEnabled(true);
+
 
             }
         });
@@ -171,6 +201,14 @@ public class MainActivity extends AppCompatActivity {
         aux += "9";
         textView.setText(aux);
     }
+    public void doButtonClickDoc(View view) {
+        //    numbers = (String) textView.getText();
+        textView = findViewById(R.id.textoNum);
+        aux = (String) textView.getText();
+        aux += ".";
+        textView.setText(aux);
+
+    }
 
     public void doButtonClickSlash(View view) {
         numbers = (String) textView.getText();
@@ -208,14 +246,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void doButtonClickDoc(View view) {
-    //    numbers = (String) textView.getText();
-        textView = findViewById(R.id.textoNum);
-        aux = (String) textView.getText();
-        aux += ".";
-        textView.setText(aux);
 
-    }
 
 
     @SuppressLint("SetTextI18n")
@@ -231,7 +262,7 @@ public class MainActivity extends AppCompatActivity {
         boolean encontrado = false;
         String aux = "", eltexto = textView.getText().toString();
         do {
-            if (eltexto.charAt(i) <= 57 && eltexto.charAt(i) >= 48) {
+            if (eltexto.charAt(i) <= 57 && eltexto.charAt(i) >= 48 ||  eltexto.charAt(i)== 46) {
                 aux += eltexto.charAt(i);
             } else {
                 encontrado = true;
@@ -259,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
         String eltexto = textView.getText().toString();
 
         do {
-            if (eltexto.charAt(i) >= 42 && eltexto.charAt(i) <= 47) {
+            if (eltexto.charAt(i) == 42 || eltexto.charAt(i) == 43 || eltexto.charAt(i)==45 ||eltexto.charAt(i)==47 ) {
                 aux = eltexto.charAt(i);
                 posicion = i;
                 encontrado = true;
