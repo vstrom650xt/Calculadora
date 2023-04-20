@@ -1,5 +1,6 @@
 package com.example.calculadora;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 
@@ -299,7 +301,6 @@ public class MainActivity extends AppCompatActivity {
         } while (i < eltexto.length() && !encontrado);
         return aux;
     }
-
 
     private double calcular(char getSymbol, String aux, String aux2) {
         double result = 0;
